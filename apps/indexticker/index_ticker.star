@@ -7,6 +7,7 @@ Author: M0ntyP
 v1.1 - Added BSE and NIFTY indices
 v1.2 - Added toggle for showing % change or pts change
 v1.3 - Added NIKKEI, Europe 350, Global 100, Global 1200, NZX50 indices; support null indicator values in chart
+v1.4 - Added DAX, CAC 40, Hang Seng, S&P/TSX, STI to the list of indices 
 """
 
 load("animation.star", "animation")
@@ -28,17 +29,22 @@ INDEX_SUFFIX = "?metrics=high?&interval="
 
 INDEX_MAP = {
     "axjo": "ASX 200",
+    "BSESN": "BSE",
+    "fchi": "CAC 40",
+    "GDAXI": "DAX",
     "dji": "Dow Jones",
     "speup": "Europe 350",
+    "ftse": "FTSE",
     "spg100": "Global 100",
     "spg1200": "Global 1200",
+    "HSI": "Hang Seng",
     "ixic": "NASDAQ",
+    "NSEI": "NIFTY",
     "n225": "NIKKEI",
     "nz50": "NZX 50",
-    "ftse": "FTSE",
     "gspc": "S&P 500",
-    "BSESN": "BSE",
-    "NSEI": "NIFTY",
+    "gsptse": "S&P/TSX",
+    "STI": "STI",
 }
 
 def main(config):
