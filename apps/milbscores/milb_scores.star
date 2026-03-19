@@ -21,7 +21,7 @@ v1.3.1
 Updated status check for completed games
 
 v1.4
-Updated for 2025
+Updated for 2025 Season
 
 Team changes and updated colors
 - Mississippi Braves (MIS) are now Columbus Clingstones (COL) 
@@ -34,6 +34,11 @@ New Logos
 - Corpus Christi Hooks
 
 Added new logic to color lookup as there are 2 COL teams now - Clippers and Clingstones
+
+1.5
+Updated for 2026 Season
+
+Team changes and updated colors
 """
 
 load("encoding/json.star", "json")
@@ -125,7 +130,7 @@ def main(config):
     Display = []
     Title = ""
     SportID = ""
-    localtimezone = time.tz()
+    localtimezone = config.get("$tz", DEFAULT_TIMEZONE)
     SelectedLeague = config.get("League", "1")
     RotationSpeed = config.get("speed", "3")
 
